@@ -363,16 +363,16 @@ bar_name <- rep("",5)
 pdf("figure_3.pdf", height = 4.5, width = 8)
 par(mar = c(4, 5, 2, 1))
 barplot(point, ylim = c(0, 0.3), names.arg = bar_name, 
-        col = c(adjustcolor("red", 0.4), "gray", "gray", "gray", "gray"), cex.axis = 1.3,
+        col = c(adjustcolor("black", 0.7), "gray", "gray", "gray", "gray"), cex.axis = 1.3,
         ylab = "Proportion of respondents", cex.lab = 1.45)
 arrows(base[,1], point - 1.96*se_p, base[,1], point + 1.96*se_p, 
        lwd = 3, angle = 90, length = 0.05, code = 3,
-       col = c("red", "black", "black", "black", "black"))
+       col = c("black", "black", "black", "black", "black"))
 mtext(bar_name_u[1], outer = FALSE, side = 1, at = base[1], cex = 1.2, line = 2.4)
 mtext(bar_name_u[2], outer = FALSE, side = 1, at = base[2], cex = 1.2, line = 2.4)
 mtext(bar_name_u[3], outer = FALSE, side = 1, at = base[3], cex = 1.2, line = 2.4)
 mtext(bar_name_u[4], outer = FALSE, side = 1, at = base[4], cex = 1.2, line = 2.4)
 mtext(bar_name_u[5], outer = FALSE, side = 1, at = base[5], cex = 1.2, line = 2.4)
-text(x = base[1], y = 0.275, "Estimate from \nList Experiment", col = "red", font = 2)
+text(x = base[1], y = 0.275, "Estimate from \nList Experiment", col = "black", font = 2)
 text(x = (base[3] + base[4])/2, y = 0.275, "Direct Questions", font = 2)
 dev.off()
